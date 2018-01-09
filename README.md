@@ -1,7 +1,7 @@
 # beyondjs
 
-beyondjs is a **prototype** framework that use client side a small
-JavaScript runtime to render the html
+beyondjs is a **prototype** framework that use a small client side
+JavaScript kernel to render the html
 via [snabbdom](https://github.com/snabbdom/snabbdom/) a virtual dom
 library and forward DOM events to the backend via WebSockets. From
 there the backend will process the event and return a JSON string
@@ -14,13 +14,15 @@ libraries it's not demonstrated.
 
 Right now, there is a small "counter" application and a todomvc.
 
-Requires Python 3.6. Use `pip install -r requirements.txt` to install
-all the python dependencies, then:
-
 ```shell
-
+git clone https://github.com/amirouche/beyondjs
+cd beyondjs
+pip3 install --user -r requirements
+cd src
+python3 main.py
 ```
 
+Then goto [localhost:8080](http://localhost:8080/).
 
 ## TODO
 
