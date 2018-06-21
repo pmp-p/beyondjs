@@ -2,14 +2,12 @@
 application without writing javascript
 
 """
-import asyncio
 import re
-from uuid import uuid4
 from collections import namedtuple
 from functools import wraps
 from json import dumps
 from json import loads
-from itertools import groupby
+from uuid import uuid4
 
 import aiohttp
 from aiohttp import web
@@ -220,6 +218,7 @@ async def websocket(request):
 with open('index.html', 'rb') as f:
     INDEX = f.read()
 
+
 async def index(request):
     """Return the index page"""
     return web.Response(body=INDEX, content_type='text/html')
@@ -296,7 +295,9 @@ def index_render(event):
     shell.append(menu)
     return shell
 
+
 router.add_route(r'^/$', index_init, index_render)
+
 
 # counter
 
@@ -318,7 +319,9 @@ def counter_render(event):
     shell.append(button)
     return shell
 
+
 router.add_route(r'^/counter$', counter_init, counter_render)
+
 
 # todomvc
 
